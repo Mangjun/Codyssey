@@ -1,3 +1,5 @@
+# 실행하려면 project1 폴더까지 이동한 뒤 python -m procedure1.problem7.mars_mission_computer 입력
+
 from procedure1.problem6.mars_mission_computer import DummySensor
 from time import sleep
 
