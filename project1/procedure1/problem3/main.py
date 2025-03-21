@@ -1,26 +1,24 @@
-import csv
-
 # 임시 저장소
 data = list()
 
 try :
     # csv 파일 읽기
     f = open('Mars_Base_Inventory_List.csv', 'r', encoding='utf-8')
-    reader = csv.reader(f)
+    lines = f.readlines()
 
     print("Mars_Base_Inventory_List.csv 읽었습니다.")
     print()
 
     # csv 파일 출력
-    for row in reader :
+    for row in lines:
+        row = row.strip().split(',')
         print(row[0], row[1], row[2], row[3], row[4])
-        data.append((row[0], row[1], row[2], row[3], row[4]))
+        data.append(tuple(row))
 
     print()
     
     # 인화성 지수가 0.7 이상되는 목록을 저장할 csv 파일
     new_file = open('Mars_Base_Inventory_danger.csv', 'w', encoding='utf-8', newline='')
-    writer = csv.writer(new_file)
 
     # 인화성이 높은 순으로 정렬
     sort_list = sorted(data[1:], key=lambda x: x[4], reverse=True)
@@ -36,19 +34,39 @@ try :
     print()
 
     # 인화성이 0.7 이상인 목록 출력
-    for row in sort_list :
-        if row[4] >= '0.7' :
+    print(danger_list[0][0], danger_list[0][1], danger_list[0][2], danger_list[0][3], danger_list[0][4])
+    for row in sort_list[1:] :
+        if float(row[4]) >= 0.7 :
             print(row[0], row[1], row[2], row[3], row[4])
             danger_list.append((row[0], row[1], row[2], row[3], row[4]))
 
     print()
 
     # 인화성이 0.7 이상인 목록 csv 파일로 저장
-    writer.writerows(danger_list)
+    for row in danger_list :
+        new_file.write(','.join(row) + '\n')
+
+    new_file.close()
 
     # (보너스 과제) 이진 파일로 저장
     binary_file = open('Mars_Base_Inventory_List.bin', 'wb')
-    binary_file.write(bytes(str(sort_list), 'utf-8'))
+    for row in sort_list:
+        line = ','.join(row) + '\n'
+        binary_file.write(line.encode('utf-8'))
+
+    binary_file.close()
+
+    # (보너스 과제) 이진 파일 읽어서 출력
+    binary_read_file = open('Mars_Base_Inventory_List.bin', 'rb')
+    read_data = binary_read_file.read().decode('utf-8')
+
+    binary_list = [tuple(row.split(',')) for row in read_data.splitlines()]
+
+    print("이진 파일로 저장된 목록 출력합니다.")
+    print()
+
+    for row in binary_list:
+        print(row)
 
     '''
     텍스트 파일의 장단점
@@ -82,7 +100,6 @@ try :
 
     # 파일 리소스 회수
     f.close()
-    new_file.close()
-    binary_file.close()
+    binary_read_file.close()
 except FileNotFoundError :
     print("File not found")
