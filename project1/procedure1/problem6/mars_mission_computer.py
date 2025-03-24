@@ -20,7 +20,8 @@ class DummySensor :
         self.env_values['mars_base_internal_oxygen'] = random.randint(4, 7)
 
     def get_env(self) :
-        self.write_log()
+        if __name__ == '__main__' :
+            self.write_log()
         return self.env_values
     
     def write_log(self) :
