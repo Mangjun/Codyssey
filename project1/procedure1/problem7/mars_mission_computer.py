@@ -3,6 +3,8 @@
 from procedure1.problem6.mars_mission_computer import DummySensor
 import time
 import threading
+import platform
+import psutil # pip install psutil
 
 class MissonComputer :
     def __init__(self):
@@ -25,6 +27,34 @@ class MissonComputer :
         self.env_values['mars_base_internal_oxygen'] = sensor_data['mars_base_internal_oxygen']
 
         return self.env_values
+
+    def get_mission_computer_info(self) :
+        try :
+            os = platform.platform()
+            os_version = platform.version()
+            cpu = platform.processor()
+            cpu_core_count = psutil.cpu_count(logical=False)
+            mem = psutil.virtual_memory()
+            print('{')
+            print('    "운영체제": "{0}",'.format(os))
+            print('    "운영체제 버전": "{0}",'.format(os_version))
+            print('    "CPU의 타입": "{0}",'.format(cpu))
+            print('    "CPU의 코어 수": "{0}",'.format(cpu_core_count))
+            print('    "메모리의 크기": "{0:.2f}GB"'.format(mem.total / (1024**3)))
+            print('}')
+        except :
+            print('운영체제 정보를 가져오는데 실패하였습니다.')
+            
+    def get_mission_computer_load(self) :
+        try :
+            cpu_current_using_percent = psutil.cpu_percent()
+            mem_current_using_precent = psutil.virtual_memory().percent
+            print('{')
+            print('    "CPU 실시간 사용량": "{0}%",'.format(cpu_current_using_percent))
+            print('    "메모리 실시간 사용량": "{0}%"'.format(mem_current_using_precent))
+            print('}')
+        except :
+            print('CPU 및 메모리 사용량을 가져오는데 실패하였습니다.')
     
 def get_user_input():
     global stop_program
