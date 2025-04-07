@@ -61,7 +61,7 @@ if __name__ == '__main__':
         current_time = time.time()
         elsapsed_time = current_time - start_time
 
-        if elsapsed_time >= 600 :
+        if elsapsed_time >= 300 :
             print("---5분 동안의 평균 환경 데이터---")
             print('{')
             for key, value in avg_env.items() :
