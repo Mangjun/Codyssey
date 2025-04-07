@@ -65,9 +65,18 @@ if __name__ == '__main__':
             print("---5분 동안의 평균 환경 데이터---")
             print('{')
             for key, value in avg_env.items() :
-                print('    "{0}": {1},'.format(key, value/cnt))
+                if key == 'mars_base_internal_oxygen' :
+                    print('    "{0}": {1}'.format(key, value/cnt))
+                else :
+                    print('    "{0}": {1},'.format(key, value/cnt))
             print('}')
             print()
+            avg_env['mars_base_internal_temperature'] = 0
+            avg_env['mars_base_external_temperature'] = 0
+            avg_env['mars_base_internal_humidity'] = 0
+            avg_env['mars_base_external_illuminance'] = 0
+            avg_env['mars_base_internal_co2'] = 0
+            avg_env['mars_base_internal_oxygen'] = 0
             start_time = current_time
 
         env_values = RunComputer.get_sensor_data(ds)
@@ -82,7 +91,10 @@ if __name__ == '__main__':
 
         print('{')
         for key, value in env_values.items() :
-            print('    "{0}": {1},'.format(key, value))
+            if key == 'mars_base_internal_oxygen' :
+                print('    "{0}": {1}'.format(key, value))
+            else :
+                print('    "{0}": {1},'.format(key, value))
         print('}')
 
         print()
