@@ -1,0 +1,4 @@
+# 운영체제 정보를 출력하고 싶으신 것만 적어주세요 [os, os_version, cpu, cpu_core_count, mem]
+# 사용량을 출력하고 싶으신 것만 적어주세요 [cpu_using_percent, mem_using_percent]
+# ex) os, cpu, cpu_core_count, mem, cpu_using_percent
+os, os_version, cpu, cpu_core_count, mem, cpu_using_percent, mem_using_percent
