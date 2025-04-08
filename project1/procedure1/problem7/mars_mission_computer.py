@@ -10,7 +10,7 @@ import psutil # pip install psutil
 
 # 전역 변수
 stop_program = False
-standard_time = (300, "5분")
+standard_time = (300, '5분')
 keys = (
     'mars_base_internal_temperature',
     'mars_base_external_temperature',
