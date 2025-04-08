@@ -99,11 +99,11 @@ def get_user_input():
             stop_program = True
 
 # 평균 구하기
-def get_avg(env_values, cnt) :
+def get_avg(avg_env, cnt) :
     if cnt == 0:
         return {key: 0 for key in keys}
     else :
-        return {key: env_values[key] / cnt for key in keys}
+        return {key: avg_env[key] / cnt for key in keys}
 
 if __name__ == '__main__':
     ds = DummySensor()
