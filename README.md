@@ -11,3 +11,4 @@
 | [이별은 화성] - 불안정한 미션 컴퓨터... | [문제 8](https://github.com/Mangjun/Codyssey/tree/main/project1/procedure1/problem8) |
 | [잊고 있었던 고마운 것들] - 계산기의 제작 | [문제 3](https://github.com/Mangjun/Codyssey/tree/main/project1/procedure2/problem3) |
 | [잊고 있었던 고마운 것들] - 계산기의 핵심 코어 제작 | [문제 4](https://github.com/Mangjun/Codyssey/tree/main/project1/procedure2/problem4) |
+| [잊고 있었던 고마운 것들] - 비밀번호 XXXXXX | [문제 1](https://github.com/Mangjun/Codyssey/tree/main/project1/procedure2/problem1) |
