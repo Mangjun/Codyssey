@@ -13,3 +13,4 @@
 | [잊고 있었던 고마운 것들] - 계산기의 핵심 코어 제작 | [문제 4](https://github.com/Mangjun/Codyssey/tree/main/project1/procedure2/problem4) |
 | [잊고 있었던 고마운 것들] - 비밀번호 XXXXXX | [문제 1](https://github.com/Mangjun/Codyssey/tree/main/project1/procedure2/problem1) |
 | [잊고 있었던 고마운 것들] - 카이사르의 암호 | [문제 2](https://github.com/Mangjun/Codyssey/tree/main/project1/procedure2/problem2) |
+| [잊고 있었던 고마운 것들] - 자비스가 필요해! | [문제 7](https://github.com/Mangjun/Codyssey/tree/main/project1/procedure2/problem7) |
