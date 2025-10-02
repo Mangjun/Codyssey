@@ -24,3 +24,4 @@
 | [또 하나의 희망] - 통신장비에 채팅 기능 추가 | [문제 2](https://github.com/Mangjun/Codyssey/tree/main/project1/procedure3/problem2) |
 | [또 하나의 희망] - 조금 더 나은 웹 서버 | [문제 4](https://github.com/Mangjun/Codyssey/tree/main/project1/procedure3/problem4) |
 | [또 하나의 희망] - 정기적으로 배달되는 지구소식 | [문제 7](https://github.com/Mangjun/Codyssey/tree/main/project1/procedure3/problem7) |
+| [또 하나의 희망] - 로그인을 넘어 | [문제 8](https://github.com/Mangjun/Codyssey/tree/main/project1/procedure3/problem8) |
