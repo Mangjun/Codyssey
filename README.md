@@ -27,3 +27,4 @@
 | [또 하나의 희망] - 로그인을 넘어 | [문제 8](https://github.com/Mangjun/Codyssey/tree/main/project1/procedure3/problem8) |
 | [또 하나의 희망] - SOS | [문제 1](https://github.com/Mangjun/Codyssey/tree/main/project1/procedure3/problem1) |
 | [또 하나의 희망] - 감동의 메시지 | [문제 2](https://github.com/Mangjun/Codyssey/tree/main/project1/procedure3/problem2-2) |
+| [지구에서 온 비트] - 또 새로운 프로젝트 | [문제 1](https://github.com/Mangjun/Codyssey/tree/main/project1/procedure4/problem1) |
