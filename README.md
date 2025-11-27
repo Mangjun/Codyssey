@@ -30,3 +30,4 @@
 | [지구에서 온 비트] - 또 새로운 프로젝트 | [문제 1](https://github.com/Mangjun/Codyssey/tree/main/project1/procedure4/problem1) |
 | [지구에서 온 비트] - 완전히 작동하는 Todo | [문제 3](https://github.com/Mangjun/Codyssey/tree/main/project1/procedure4/problem3) |
 | [지구에서 온 비트] - 데이터베이스를 또… | [문제 5](https://github.com/Mangjun/Codyssey/tree/main/project1/procedure4/problem5) |
+| [지구에서 온 비트] - 질문 기능을 추가해보자 | [문제 6](https://github.com/Mangjun/Codyssey/tree/main/project1/procedure4/problem6) |
